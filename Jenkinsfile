@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     echo 'Процесс, занимающий наибольший объем памяти системы, в текущий момент:'
-                    sh 'ps -eo pid, comm, %mem --sort=-%mem | head -n 2'
+                    sh 'ps -eo pid,comm,%mem --sort=-%mem | head -n 2'
                 }
             }
         }
